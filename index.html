@@ -78,6 +78,10 @@
   <script type="text/x-handlebars" id="player">
     <h4>{{playerName}}</h4>
     Number {{playerNumber}}<br>
+    {{#each shot in this.shots}}
+      {{made}}
+    {{/each}}
+    {{input type="text" id="made" class="form-control" value=made }}
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>

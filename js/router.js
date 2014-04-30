@@ -90,5 +90,4 @@ StatsKeeper.PlayerController = Ember.ObjectController.extend({
 
 StatsKeeper.PlayersController = Ember.ObjectController.extend({
 
-
 });
