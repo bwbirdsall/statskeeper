@@ -3,6 +3,7 @@ StatsKeeper.Router.map(function() {
     this.resource('new_team', { path: '/teams/new'})
     this.resource('team', { path: '/teams/:id' }, function() {
       this.resource('players', { path: '/players' }, function() {
+        this.resource('new_player', { path: 'players/new'})
         this.resource('player', { path: 'players/:id' })
       })
     });
@@ -27,8 +28,14 @@ StatsKeeper.PlayerRoute = Ember.Route.extend({
   }
 });
 
-StatsKeeper.NewContactRoute = Ember.Route.extend({
+StatsKeeper.NewTeamRoute = Ember.Route.extend({
   model: function() {
     return this.store.createRecord('team');
+  }
+});
+
+StatsKeeper.NewPlayerRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.createRecord('player');
   }
 });

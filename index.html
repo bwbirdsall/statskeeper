@@ -28,6 +28,7 @@
           <div class="playerNumber">{{player.playerNumber}}</div><div class="playerName">{{#link-to 'player' player}}{{player.playerName}}{{/link-to}}</div><br/>
         {{/each}}
       </ul>
+      {{#link-to 'new_player'}}Add a player to {{name}}{{/link-to}}
     </div>
     <div class="col-md-3">
       {{outlet}}
@@ -36,6 +37,10 @@
 
   <script type="text/x-handlebars" id="new_team">
     HOLY COW LET US ENTER A TEAM.
+  </script>
+
+  <script type="text/x-handlebars" id="new_player">
+    HOLY SMOKES ANOTHER PLAYER!
   </script>
 
   <script type="text/x-handlebars" id="player">
