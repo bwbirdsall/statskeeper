@@ -3,7 +3,7 @@ StatsKeeper
 
 An ember-based stats program for tracking data at a basketball game.
 
-[-] As scorekeeper I can add the teams playing.
+[+] As scorekeeper I can add the teams playing.
 
 [-] As scorekeeper, I can add the players on each team.
 
