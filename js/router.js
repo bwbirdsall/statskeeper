@@ -39,3 +39,13 @@ StatsKeeper.NewPlayerRoute = Ember.Route.extend({
     return this.store.createRecord('player');
   }
 });
+
+StatsKeeper.NewTeamController = Ember.ObjectController.extend({
+  actions: {
+    createTeam: function() {
+      var model = this.get('model');
+      model.save();
+      this.transitionToRoute('teams');
+    }
+  }
+});

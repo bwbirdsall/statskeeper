@@ -18,3 +18,16 @@
   width: 150px;
   float: left;
 }
+
+.navbar {
+  background-color: darkred;
+}
+
+.navbar-brand a {
+  font-style: bold !important;
+  color: #ffffff !important;
+}
+
+body {
+  padding-top: 80px;
+}

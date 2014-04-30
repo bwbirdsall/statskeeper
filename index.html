@@ -9,7 +9,9 @@
 <body>
   <script type="text/x-handlebars" id="teams">
     <div class="container">
-      <h2>StatsKeeper</h2>
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-brand pull-left">{{#link-to 'teams' }}StatsKeeper{{/link-to}}</div>
+      </div>
       <div class="col-md-4">
         {{#each}}
           <h4>{{#link-to 'team' this}}{{name}}{{/link-to}}</h4>
@@ -36,7 +38,20 @@
   </script>
 
   <script type="text/x-handlebars" id="new_team">
-    HOLY COW LET US ENTER A TEAM.
+    <div class="col-md-8">
+      <h3>HOLY COW LET US ENTER A TEAM.</h3>
+
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          {{#each error in errors.name}}
+            {{error.message}}
+          {{/each}}
+          {{input type="text" id="name" class="form-control" value=name}}
+        </div>
+        <button {{action createTeam}} class="btn btn-info">Create Team</button>
+      </form>
+    </div>
   </script>
 
   <script type="text/x-handlebars" id="new_player">
