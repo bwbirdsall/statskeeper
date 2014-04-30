@@ -4,14 +4,14 @@ StatsKeeper.Team = DS.Model.extend({
 });
 
 StatsKeeper.Team.FIXTURES = [
-  {
-    id: 1,
-    name: "(Your) Portland Trailblazers",
-    players: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-  },
-  {
-    id: 2,
-    name: "(The) Houston Rockets",
-    players: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-  }
+  // {
+  //   id: 1,
+  //   name: "(Your) Portland Trailblazers",
+  //   players: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  // },
+  // {
+  //   id: 2,
+  //   name: "(The) Houston Rockets",
+  //   players: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  // }
 ];

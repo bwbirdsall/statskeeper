@@ -4,8 +4,10 @@ StatsKeeper.Router.map(function() {
     this.resource('team', { path: '/teams/:id' }, function() {
       this.resource('players', { path: '/players' }, function() {
         this.resource('new_player', { path: '/new'})
-        this.resource('player', { path: '/:id' })
-      })
+        this.resource('player', { path: '/:id' }, function(){
+          this.resource('shot_attempts', { path: '/shot_attempts' })
+        });
+      });
     });
   });
 });
@@ -57,13 +59,10 @@ StatsKeeper.NewPlayerController = Ember.ObjectController.extend({
 
   actions: {
     createPlayer: function() {
-      var team = this.get('team').get('model');
+      var teamteam = this.get('team').get('model');
       var model = this.get('model');
-      var newPlayer = this.store.createRecord('player', {
-        name: this.get('playerName'),
-        number: this.get('playerNumber')
-      });
-      team.get('players').pushObject(model);
+      model.save();
+      teamteam.get('players').pushObject(model);
       this.transitionToRoute('teams');
     }
   }
