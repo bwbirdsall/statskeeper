@@ -26,11 +26,11 @@
     <div class="col-md-5">
       <h3>{{name}}</h3>
       <ul>
-        {{#each player in this.players}}
-          <div class="playerNumber">{{player.playerNumber}}</div><div class="playerName">{{#link-to 'player' player}}{{player.playerName}}{{/link-to}}</div><br/>
+        {{#each player in this.players itemController='player'}}
+          <div class="playerNumber">{{player.playerNumber}}</div><div class="playerName">{{#link-to 'player' player}}{{player.playerName}}{{/link-to}}<button {{action deletePlayer}} class="btn btn-danger btn-xs">X</button></div><br/>
         {{/each}}
       </ul>
-      {{#link-to 'new_player' this}}Add a player to {{name}}{{/link-to}}
+      {{#link-to 'new_player'}}Add a player to {{name}}{{/link-to}}
     </div>
     <div class="col-md-3">
       {{outlet}}

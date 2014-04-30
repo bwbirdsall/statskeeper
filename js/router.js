@@ -35,8 +35,7 @@ StatsKeeper.NewTeamRoute = Ember.Route.extend({
 });
 
 StatsKeeper.NewPlayerRoute = Ember.Route.extend({
-  model: function(params) {
-    console.log(params);
+  model: function() {
     return this.store.createRecord('player');
   }
 });
@@ -52,13 +51,20 @@ StatsKeeper.NewTeamController = Ember.ObjectController.extend({
 });
 
 StatsKeeper.NewPlayerController = Ember.ObjectController.extend({
+  needs: 'team',
+  team: Ember.computed.alias('controllers.team'),
+
+
   actions: {
-    createPlayer: function(params) {
+    createPlayer: function() {
+      var team = this.get('team').get('model');
       var model = this.get('model');
-      var team = this.store.find('team', params.id)
-      model.save();
-      team.players.pushObject(model);
-      this.transitionToRoute('team', team.id);
+      var newPlayer = this.store.createRecord('player', {
+        name: this.get('playerName'),
+        number: this.get('playerNumber')
+      });
+      team.get('players').pushObject(model);
+      this.transitionToRoute('teams');
     }
   }
 });
@@ -71,4 +77,19 @@ StatsKeeper.TeamController = Ember.ObjectController.extend({
       }
     }
   }
-})
+});
+
+StatsKeeper.PlayerController = Ember.ObjectController.extend({
+  actions: {
+    deletePlayer: function() {
+      if (confirm('Cut the guy, huh?')) {
+        this.get('model').destroyRecord();
+      }
+    }
+  }
+});
+
+StatsKeeper.PlayersController = Ember.ObjectController.extend({
+
+
+});

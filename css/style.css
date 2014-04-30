@@ -10,12 +10,14 @@
 .playerNumber {
   background-color: #dddddd;
   width: 20px;
+  height: 27px;
   float: left;
 }
 
 .playerName {
   background-color: #aaaaaa;
-  width: 150px;
+  width: 175px;
+  height: 27px;
   float: left;
 }
 
