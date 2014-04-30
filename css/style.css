@@ -2,3 +2,19 @@
 .ember-application {
     margin: 20px;
 }
+
+.playerNumber, .playerName {
+  text-align: center;
+}
+
+.playerNumber {
+  background-color: #dddddd;
+  width: 20px;
+  float: left;
+}
+
+.playerName {
+  background-color: #aaaaaa;
+  width: 150px;
+  float: left;
+}

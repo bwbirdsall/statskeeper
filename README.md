@@ -1,36 +1,18 @@
-starter-kit
+StatsKeeper
 ===========
 
-A starter kit for Ember
+An ember-based stats program for tracking data at a basketball game.
 
-Your Ember.js project is almost ready! Here's how to get started:
+[-] As scorekeeper I can add the teams playing.
 
-- Start writing your app in js/app.js.
+[-] As scorekeeper, I can add the players on each team.
 
-- Describe your application HTML in index.html.
+[-] As scorekeeper, I can track shots taken and made.
 
-- During development, you can link to js/libs/ember-*.js to get the
-  unminified version of Ember.js.
+[-] As scorekeeper, I can track total # of shots a player has taken.
 
-- Add CSS to css/style.css
+[-] As scorekeeper, I can track the % of shots a player made and their point total.
 
-- Open index.html in your browser
+[-] The page should highlight each team's leading scorer.
 
-Tests
-=====
-
-This starter kit comes with an integration test sample, written for QUnit runner. 
-
-You can run the tests by opening the `index.html?test` page in your browser.
-
-The test is located in the `tests/tests.js` file. You can see how such an 
-integration test should be written, using QUnit assertions and ember-testing helpers.
-
-For more information about ember-testing package see [ember-testing](http://emberjs.com/guides/testing/integration/)
-
-For more information about the QUnit testing framework, see [QUnit](http://qunitjs.com/)
-
-Contact
-====
-
-www.emberjs.com
+[-] The page should toggle between sorting players by name or point total.

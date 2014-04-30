@@ -1,11 +1,7 @@
-App = Ember.Application.create();
+StatsKeeper = Ember.Application.create();
 
-App.Router.map(function() {
-  // put your routes here
-});
+StatsKeeper.ApplicationAdapter = DS.FixtureAdapter.extend();
 
-App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return ['red', 'yellow', 'blue'];
-  }
-});
+// StatsKeeper.ApplicationAdapter = DS.LSAdapter.extend({
+//     namespace: 'yournamespace'
+// });
